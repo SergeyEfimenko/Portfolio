@@ -32,7 +32,7 @@
                 <a class="nav__link" href="#">about me</a>
                 <a class="nav__link" href="#">blog</a>
                 <a class="nav__link" href="#">contact</a>
-                <a class="nav__link nav__link--btn" href="#">hire me</a>
+                <a class="nav__link nav__link--btn" href="#" data-modal="#modal_hire_me">hire me</a>
             </nav>
 
         </div>
@@ -70,8 +70,8 @@
                         <img src="/img/icon/Twitter.png" alt="">
                     </a>
                 </div>
-                <a class="btn" href="#">HIRE ME</a>
-                <button class="btn" type="button">SEE MY RESUME </button>
+                <a class="btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
+                <button class="btn" type="button" data-modal="#modal_resume">SEE MY RESUME </button>
             </div>
             
                 <img src="/img/right_side.png" alt="">
@@ -87,14 +87,14 @@
 
         <div class="works__nav">
             <a class="works__nav--link" href="#" data-filter="all">All</a>
-            <a class="works__nav--link" href="#" data-filter="App">App</a>
-            <a class="works__nav--link" href="#" data-filter="Website">Website</a>
-            <a class="works__nav--link" href="#" data-filter="Interaction">Interaction</a>
+            <a class="works__nav--link" href="#" data-filter="app">App</a>
+            <a class="works__nav--link" href="#" data-filter="website">Website</a>
+            <a class="works__nav--link" href="#" data-filter="interaction">Interaction</a>
         </div>
 
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
             <div class="portfolio__col" data-cat="app">
-                <div class="work">
+                <div class="work" data-modal="#modal_project_1">
                     <img class="work__image" src="http://dummyimage.com/370x300" alt="">
                     <div class="work__content">
                         <div class="work__cat">category: app</div>
@@ -190,6 +190,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- Reviews -->
 <div class="reviews">
@@ -344,10 +345,10 @@
 <!-- Modals -->
 
 
-<div class="modal" style="display:none;">
+<div class="modal" id="modal_project_1">
     <div class="modal__dialog">
 
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="/img/cancel.svg" alt="close">
         </button>
 
@@ -388,10 +389,10 @@
     </div>
 </div>
 
-<div class="modal" style="display:none;">
+<div class="modal" id="modal_resume">
     <div class="modal__dialog">
 
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="/img/cancel.svg" alt="close">
         </button>
 
@@ -541,10 +542,10 @@
 
 
 
-<div class="modal" style="display:none;">
+<div class="modal" id="modal_hire_me">
     <div class="modal__dialog modal__dialog--sm">
 
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="/img/cancel.svg" alt="close">
         </button>
 
