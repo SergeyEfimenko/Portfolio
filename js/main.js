@@ -1,5 +1,6 @@
 $(function() {
 
+const worksSlider = $('[data-slider="slick"]');
 
     /*        Filter
     ============================*/
@@ -46,6 +47,8 @@ modalCall.on("click", function(event) {
             transform: "scale(1)"
         });
     }, 200);
+
+    worksSlider.slick('setPosition');
 });
 
 
@@ -83,5 +86,33 @@ $(".modal__dialog").on("click", function(event) {
     event.stopPropagation();
 });
 
+/*        Slider: https://kenwheeler.github.io/slick/
+    ============================*/
+
+    worksSlider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true
+      });
+
+      $(".slickPrev").on("click", function(event){
+        event.preventDefault();
+
+        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+        
+        currentSlider.slick("slickPrev");
+      });
+      $(".slickNext").on("click", function(event){
+        event.preventDefault();
+
+        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+        currentSlider.slick("slickNext");
+      });
 
 });
+
+
+
