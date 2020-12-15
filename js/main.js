@@ -1,6 +1,6 @@
 $(function() {
 
-const worksSlider = $('[data-slider="slick"]');
+    const worksSlider = $('[data-slider="slick"]');
 
     /*        Filter
     ============================*/
@@ -12,7 +12,7 @@ const worksSlider = $('[data-slider="slick"]');
 
         let cat = $(this).data('filter');
 
-        if(cat == 'all') {
+        if(cat == 'all') {  
             $("[data-cat]").removeClass("hide");
         } else {
             $("[data-cat]").each(function() {
@@ -96,21 +96,34 @@ $(".modal__dialog").on("click", function(event) {
         fade: true,
         arrows: false,
         dots: true
-      });
+});
 
-      $(".slickPrev").on("click", function(event){
+$(".slickPrev").on("click", function(event){
         event.preventDefault();
 
         let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
         
         currentSlider.slick("slickPrev");
-      });
-      $(".slickNext").on("click", function(event){
+});
+$(".slickNext").on("click", function(event){
         event.preventDefault();
 
         let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
         currentSlider.slick("slickNext");
-      });
+});
+
+/*        Mobile Nav
+    ============================*/
+
+    const navToggle = $("#navToggle");
+    const nav = $("#nav");
+
+    navToggle.on("click", function(event){
+        event.preventDefault();
+
+        nav.toggleClass("show");
+    });
+
 
 });
 

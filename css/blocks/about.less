@@ -2,6 +2,10 @@
 
 .about {
     margin: 8.4rem 0;
+
+    @media @tablet {
+        margin: 4rem 0;
+    }
 }
 
 .about__inner {
@@ -14,9 +18,21 @@
     width: 50%;
 }
 
+.about__photo {
+    @media @tablet {
+        display: none;
+    }
+}
+
 .about__content {
     padding-left: 3.2rem;
     margin-top: 2rem;
+
+    @media @tablet {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
 }
 
 .about__title {
@@ -24,6 +40,14 @@
     color: @black;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media @notebook {
+        font-size: 2rem;
+    }
+
+    @media @mobile {
+        font-size: 1.5rem;
+    }
 }
 
 .about__bigtitle {
@@ -36,6 +60,11 @@
     color: fade(@black, 15%);
     font-weight: 700;
     text-transform: uppercase;
+
+    @media @notebook {
+        font-size: 3rem;
+    }
+
 }
 
 .about__text {

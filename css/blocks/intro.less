@@ -1,27 +1,53 @@
 // main: ../style.less
 
 
+.intro {
+    @media @mobile {
+        margin-top: 100px;
+    }
+}
 
 
 .intro__inner {
-    padding-top: 100px;
+    padding-top: 6.6rem;
     padding-bottom: 0.5px;
 
-    background: url("../img");
+    // background: url("../img");
 
     display: flex;
 
     border-bottom: 1px solid fade(@gray, 30%);
+
+    @media @tablet {
+        padding-top: 3rem;
+
+        height: auto;
+        padding-bottom: 1rem;
+    }
 }
 
 .intro__content {
     width: 50%;
+
+    @media @mobile {
+        width: 60%;
+        z-index: 2;
+    }
+
+    @media @mobile-sm {
+        width: 100%;
+    }
 }
+
 
 .intro__subtitle {
     font-size: 2.13rem;
     color: @black;
     font-weight: 200;
+
+    @media @tablet {
+        font-size: 1.5rem;
+    }
 }
 
 .intro__title {
@@ -30,6 +56,10 @@
     font-size: 3rem;
     font-weight: 700;
     color: @black;
+
+    @media @tablet {
+        font-size: 2rem;
+    }
 }
 
 .intro__text {
@@ -41,4 +71,17 @@
 
 .intro__photo {
     width: 50%;
+
+    @media @tablet {
+        width: 350px;
+    }
+
+    @media @mobile {
+        width: 240px;
+        z-index: 1;
+    }
+
+    @media @mobile-sm {
+        display: none;
+    }
 }
